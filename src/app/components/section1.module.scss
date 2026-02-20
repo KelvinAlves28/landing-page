@@ -1,0 +1,118 @@
+@use '@/styles/settings.scss' as *;
+
+.section1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 16px;
+    z-index: 1;
+
+    .bg {
+        width: 2390px;
+        height: 1564px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+
+    .container {
+        max-width: 809px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        z-index: 1;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+
+            h1 {
+                text-align: center;
+                @include H4Bold($white);
+            }
+
+            p {
+                text-align: center;
+                @include SmallRegular($white);
+            }
+        }
+
+        .button {
+            padding: 12px 48px;
+            width: 100%;
+            max-width: 280px;
+            background-color: $primary-color;
+            border-radius: 8px;
+            text-align: center;
+            @include pSemiBold($bg-dark);
+            box-shadow: 0px 0px 100px 0px $primary-color50;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+@include tablet() {
+    .section1 {
+        padding: 70px 24px;
+
+        .container {
+            gap: 32px;
+
+            .title {
+                gap: 16px;
+
+                h1 {
+                    @include H3Bold($white);
+                }
+
+                p {
+                    @include InputRegular($white);
+                }
+            }
+
+            .button {
+                padding: 12px 64px;
+                max-width: 312px;
+            }
+        }
+    }
+}
+
+@include notebook() {
+    .section1 {
+        padding: 150px 100px;
+
+        .container {
+            max-width: 1033px;
+            gap: 48px;
+
+            .title {
+                gap: 32px;
+
+                h1 {
+                    @include BigH1Bold($white);
+                }
+
+                p {
+                    @include pRegular($white);
+                }
+            }
+
+            .button {
+                padding: 16px 64px;
+                transition: box-shadow 0.5s ease-in-out;
+
+                &:hover {
+                    box-shadow: 0px 0px 100px 0px $primary-color50;
+                }
+            }
+        }
+    }
+}

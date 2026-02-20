@@ -1,0 +1,203 @@
+@use '@/styles/settings.scss' as *;
+
+.section5 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 16px 80px;
+
+    .bg {
+        width: 1980px;
+        height: 1148px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 809px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+
+            h2 {
+                @include H2Bold($white);
+                text-align: center;
+            }
+
+            p {
+                @include pRegular($white);
+                text-align: center;
+            }
+        }
+
+        .boxes {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .box-border {
+                position: relative;
+                border-radius: 16px;
+
+                &::after {
+                    padding: 1px;
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    @include linearGradient();
+                    border-radius: 16px;
+                    z-index: 1;
+                    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    mask-composite: xor;
+                    -webkit-mask-composite: xor;
+                }
+
+                .box {
+                    padding: 32px;
+                    background-color: $white2;
+                    border: 1px solid $white5;
+                    border-radius: 16px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 32px;
+
+                    .infos {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 16px;
+
+                        .title {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 8px;
+
+                            h3 {
+                                @include H2Bold($white);
+                            }
+
+                            p {
+                                @include pRegular($white);
+                                text-align: left;
+                            }
+                        }
+
+                        .valor {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+
+                            .valor-antigo {
+                                @include pRegular($white50);
+                                text-decoration: line-through;
+                            }
+
+                            .valor-atual {
+                                @include H2Bold($white);
+
+                                span {
+                                    @include pRegular($white50);
+                                }
+                            }
+                        }
+
+                        .beneficios {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 8px;
+
+                            .beneficio {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: flex-start;
+                                gap: 8px;
+
+                                img {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+
+                                p {
+                                    @include pRegular($white);
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+
+                    .button-planos {
+                        background-color: $primary-color;
+                        width: 100%;
+                        padding: 16px 0;
+                        border-radius: 12px;
+                        @include pSemiBold($bg-dark);
+                        text-align: center;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet() {
+    .section5 {
+        padding: 60px 24px 100px;
+
+        .container {
+            gap: 32px;
+
+            .title {
+                gap: 16px;
+
+                h2 {
+                    @include H1Bold($white);
+                }
+            }
+        }
+    }
+}
+
+@include desktop() {
+    .section5 {
+        padding: 150px 100px 200px;
+
+        .container {
+            max-width: 1140px;
+            gap: 64px;
+
+            .boxes {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+                gap: 24px;
+            }
+
+            .box-border .box {
+                margin: 1px;
+                background-color: $white4;
+                z-index: 2;
+            }
+        }
+    }
+}

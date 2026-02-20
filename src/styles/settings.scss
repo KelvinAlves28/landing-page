@@ -1,0 +1,276 @@
+$bg-dark: #071026;
+$bg-dark-light: #131B2F;
+$bg-light-dark: #161F35;
+$bg-light: #24304B;
+
+$primary-color: #F79256;
+$primary-color80: rgba(247, 145, 86, 0.8);
+$primary-color50: rgba(247, 145, 86, 0.5);
+$white: #E3E8F3;
+$white2: rgba(227, 232, 243, 0.02);
+$white4: rgba(227, 232, 243, 0.04);
+$white5: rgba(227, 232, 243, 0.05);
+$white10: rgba(227, 232, 243, 0.1);
+$white20: rgba(227, 232, 243, 0.2);
+$white30: rgba(227, 232, 243, 0.3);
+$white40: rgba(227, 232, 243, 0.4);
+$white50: rgba(227, 232, 243, 0.5);
+$white60: rgba(227, 232, 243, 0.6);
+$white70: rgba(227, 232, 243, 0.7);
+$white80: rgba(227, 232, 243, 0.8);
+$white90: rgba(227, 232, 243, 0.9);
+$gray: #7B8292;
+$light-gray: #bebebe;
+
+$green: #27AE60;
+$red: #EB5757;
+@mixin redShadow() {
+    box-shadow: 0px 0px 10px 4px rgba(235, 87, 87, 0.4);
+}
+$red-light: #ffdddd;
+$purple: #BB6BD9;
+$yellow: #F2C94C;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+@mixin linearGradient() {
+    background: linear-gradient(180deg, rgba(227, 232, 243, 0.3), rgba(227, 232, 243, 0)); /* Gradiente da borda */
+}
+
+@mixin scrollBar() {
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $bg-light-dark;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $bg-dark;
+        border-radius: 10px;
+        border: 4px solid $bg-light-dark;
+    }
+}
+
+@mixin buttonHover($color) {
+    &:hover {
+        box-shadow: 0px 0px 20px 0px $color;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px 20px 0px $color;
+    }
+}
+
+@mixin BigH1Bold($color) {
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    color: $color;
+}
+
+@mixin BigH1Regular($color) {
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 60px;
+    color: $color;
+}
+
+@mixin BigH1Light($color) {
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 60px;
+    color: $color;
+}
+
+@mixin H1Bold($color) {
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 46px;
+    color: $color;
+}
+
+@mixin H1Regular($color) {
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 46px;
+    color: $color;
+}
+
+@mixin H1Light($color) {
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 46px;
+    color: $color;
+}
+
+@mixin H2Bold($color) {
+    font-family: Poppins;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 40px;
+    color: $color;
+}
+
+@mixin H2Regular($color) {
+    font-family: Poppins;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 40px;
+    color: $color;
+}
+
+@mixin H2Light($color) {
+    font-family: Poppins;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 40px;
+    color: $color;
+}
+
+@mixin H3Bold($color) {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    color: $color;
+}
+
+@mixin H3SemiBold($color) {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    color: $color;
+}
+
+@mixin H3Regular($color) {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $color;
+}
+
+@mixin H3Light($color) {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 28px;
+    color: $color;
+}
+
+@mixin H4Bold($color) {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    color: $color;
+}
+
+@mixin H4Regular($color) {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $color;
+}
+
+@mixin H4Light($color) {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: $color;
+}
+
+@mixin pSemiBold($color) {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $color;
+}
+
+@mixin pRegular($color) {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color;
+}
+
+@mixin InputSemiBold($color) {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    color: $color;
+}
+
+@mixin InputRegular($color) {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $color;
+}
+
+@mixin SmallSemiBold($color) {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    color: $color;
+}
+
+@mixin SmallRegular($color) {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $color;
+}
+
+@mixin LabelSemiBold($color) {
+    font-family: Poppins;
+    font-size: 8px;
+    font-weight: 600;
+    line-height: 12px;
+    color: $color;
+}
+
+@mixin LabelRegular($color) {
+    font-family: Poppins;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    color: $color;
+}
+
+@mixin tablet() {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin notebook() {
+    @media (min-width: 1024px){
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
