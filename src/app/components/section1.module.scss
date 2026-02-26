@@ -1,11 +1,12 @@
 @use '@/styles/settings.scss' as *;
 
+
 .section1 {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 48px 16px;
+    padding: 70px 24px;
     z-index: 1;
 
     .bg {
@@ -23,74 +24,49 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 24px;
+        gap: 32px;
         z-index: 1;
 
         .title {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
 
             h1 {
                 text-align: center;
-                @include H4Bold($white);
+                @include H3Bold($white);
             }
 
             p {
                 text-align: center;
-                @include SmallRegular($white);
+                @include InputRegular($white);
             }
         }
 
         .button {
-            padding: 12px 48px;
+            padding: 12px 64px;
             width: 100%;
-            max-width: 280px;
+            max-width: 312px;
             background-color: $primary-color;
             border-radius: 8px;
             text-align: center;
             @include pSemiBold($bg-dark);
-            box-shadow: 0px 0px 100px 0px $primary-color50;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    }
-}
+            transition: all 0.3s ease;
 
-@include tablet() {
-    .section1 {
-        padding: 70px 24px;
-
-        .container {
-            gap: 32px;
-
-            .title {
-                gap: 16px;
-
-                h1 {
-                    @include H3Bold($white);
-                }
-
-                p {
-                    @include InputRegular($white);
-                }
-            }
-
-            .button {
-                padding: 12px 64px;
-                max-width: 312px;
-            }
+            &:hover {
+                box-shadow: 0px 0px 100px 0px $primary-color50;
+            }            
         }
     }
 }
 
 @include notebook() {
     .section1 {
-        padding: 150px 100px;
+        padding: 120px 100px;
 
         .container {
-            max-width: 1033px;
+            max-width: 1133px;
             gap: 48px;
 
             .title {
@@ -102,15 +78,6 @@
 
                 p {
                     @include pRegular($white);
-                }
-            }
-
-            .button {
-                padding: 16px 64px;
-                transition: box-shadow 0.5s ease-in-out;
-
-                &:hover {
-                    box-shadow: 0px 0px 100px 0px $primary-color50;
                 }
             }
         }

@@ -177,6 +177,14 @@ $yellow: #F2C94C;
     color: $color;
 }
 
+@mixin H4SemiBold($color) {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: $color;
+}
+
 @mixin H4Regular($color) {
     font-family: Poppins;
     font-size: 18px;
@@ -258,7 +266,7 @@ $yellow: #F2C94C;
 }
 
 @mixin tablet() {
-    @media (min-width: 768px) {
+    @media (min-width: 768px){
         @content;
     }
 }

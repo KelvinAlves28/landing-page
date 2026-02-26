@@ -12,11 +12,13 @@ export default function LandingPage() {
   return (
     <div className={styles['page-lp']}>
       <Header />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
+      <main className={styles['main-content']}>
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+      </main>
       <Footer />
     </div>
   );

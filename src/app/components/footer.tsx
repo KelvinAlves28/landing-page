@@ -10,7 +10,6 @@ import Link from 'next/link';
 
 import styles from './footer.module.scss';
 
-
 const Footer = () => {
 
     return (
@@ -18,7 +17,7 @@ const Footer = () => {
             <div className={`${styles['container']}`}>
                 <div className={`${styles['footer-content']}`}>
                     <div className={`${styles['content1']}`}>
-                        <Image className={`${styles['logo']}`} src={LogoEmpresa} alt="Logo Ease Clínicas"/>
+                        <Image className={`${styles['logo']}`} src={LogoEmpresa} alt=""/>
                         <div className={`${styles['icones-sociais']}`}>
                             <Link href="/" target="_blank">
                                 <Image src={LogoInsta} alt="Instagram" width={35} height={35}/>
@@ -30,13 +29,13 @@ const Footer = () => {
                     </div>
                     <div className={`${styles['content2']}`}>
                         <h5>Sobre nós</h5>
-                        <Link href={'#'}>Quem somos</Link>
-                        <Link href={'#'}>Contato</Link>
+                        <Link href={'/'}>Quem somos</Link>
+                        <Link href={'/'}>Contato</Link>
                     </div>
                     <div className={`${styles['content3']}`}>
                         <div className={`${styles['text']}`}>
                             <h5>Novidades</h5>
-                            <p>Cadastre-se para receber novidades e dicas sobre gestão de clínicas da Ease Clínicas.</p>
+                            <p>Cadastre-se para receber e-mails com atualizações e promoções exclusivas.</p>
                         </div>
                         <div className={`${styles['input']}`}>
                             <input type="text" placeholder="Insira seu e-mail" />
@@ -47,7 +46,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={`${styles['rodape']}`}>
-                    <p>Copyright © 2025 Ease Clínicas. Todos os direitos reservados.</p>
+                    <p>Copyright @ 2025 Laudos Psicologicos ltd. Todos os direiros reservados.</p>
                 </div>
             </div >
         </footer >

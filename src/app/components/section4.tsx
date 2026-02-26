@@ -42,8 +42,7 @@ export default function Section4() {
     <section className={styles['section4']}>
       <div className={styles['container']}>
         <div className={styles['title']} >
-          <h2>Simplifique a gestão da sua clínica</h2>
-          <h3>em três passos simples!</h3>
+          <h2>Simplifique a gestão da sua clínica <span>em três passos simples!</span></h2>
         </div>
         <div className={styles['boxes']}>
           {boxes.map((item, index) => (

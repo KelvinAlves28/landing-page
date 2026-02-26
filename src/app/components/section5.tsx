@@ -92,7 +92,9 @@ export default function Section5() {
         </div>
         <div className={styles['boxes']}>
           {boxes.map((item, index) => (
-            <div key={index} className={styles['box-border']}>{box(item.title, item.subTitle, item.valorAntigo, item.valorAtual, item.cobranca, item.beneficios, item.linkCompra)}</div>
+            <div key={index} className={styles['box-border']}>
+              {box(item.title, item.subTitle, item.valorAntigo, item.valorAtual, item.cobranca, item.beneficios, item.linkCompra)}
+            </div>
           ))}
         </div>
       </div>
