@@ -45,7 +45,7 @@ const Header = () => {
                 </Link>
                 <Menu
                     menuButton={
-                        <MenuButton className={styles['menu-button-mobile']}>
+                        <MenuButton className={styles['menu-button-mobile']} aria-label="Abrir menu de navegação">
                             <GiHamburgerMenu />
                         </MenuButton>}
                     transition

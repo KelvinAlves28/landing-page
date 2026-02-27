@@ -13,7 +13,7 @@ export default function Section4() {
           <Image src={icone} alt={`Ícone ${title}`} />
         </div>
         <div className={styles['text']}>
-          <h4>{title}</h4>
+          <span>{title}</span>
           <p>{text}</p>
         </div>
       </div>

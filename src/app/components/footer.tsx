@@ -28,19 +28,19 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className={`${styles['content2']}`}>
-                        <h5>Sobre nós</h5>
+                        <span>Sobre nós</span>
                         <Link href={'/'}>Quem somos</Link>
                         <Link href={'/'}>Contato</Link>
                     </div>
                     <div className={`${styles['content3']}`}>
                         <div className={`${styles['text']}`}>
-                            <h5>Novidades</h5>
+                            <span>Novidades</span>
                             <p>Cadastre-se para receber e-mails com atualizações e promoções exclusivas.</p>
                         </div>
                         <div className={`${styles['input']}`}>
                             <input type="text" placeholder="Insira seu e-mail" />
-                            <button>
-                                <Image src={IconeEnviar} alt=""/>
+                            <button type="button" aria-label="Enviar e-mail para cadastro na newsletter">
+                                <Image src={IconeEnviar} alt="" aria-hidden />
                             </button>
                         </div>
                     </div>
